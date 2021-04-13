@@ -44,11 +44,12 @@ Response is always a JSON object as shown below.
 ```
 
 
-#### Unsolvable Error
-When input is in the correct format but the algorithm cannot reach the end coordinates.
+#### Error
+Input Error occurs when the input is not in correct format. Few bugs are still there!
+Unsolvable Error occurs when input destination is unreachable.
 ```json
 {
-{"maze": [[0, 0, 1, 0, 1], 
+ "maze": [[0, 0, 1, 0, 1], 
           [0, 1, 0, 0, 1], 
           [1, 0, 0, 0, 1]], 
  "start": [0, 1],  
