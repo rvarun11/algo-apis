@@ -137,6 +137,7 @@ def start_solver(maze, start, end):
     start = (start[0], start[1])
     end = (end[0], end[1])
     path = astar(maze, start, end)
+    
     return path
 
 

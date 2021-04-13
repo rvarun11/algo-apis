@@ -6,8 +6,8 @@ import json
 from astar.service import  start_solver
 
 # Create your views here.
-def prepare_response(maze, solution, msg):
-    return { "maze": maze, "solution": solution, "message": msg }
+def prepare_response(maze, start, end, solution, msg):
+    return { "maze": maze,"start": start, "end": end, "solution": solution, "message": msg }
 
 @csrf_exempt
 def solve_astar(request):
@@ -20,9 +20,9 @@ def solve_astar(request):
         end = (data["end"][0], data["end"][1])
         path = start_solver(maze, start, end)
     except:
-        return JsonResponse(prepare_response([], [], "Error"))
-        
-    if (path == None):
-        return JsonResponse(prepare_response(maze, path, "Unsolvable"))
+        return JsonResponse(prepare_response(maze, start, end, None, "Input Error"))
 
-    return JsonResponse(prepare_response(maze, path, "Success"))
+    if (path == None):
+        return JsonResponse(prepare_response(maze, start, end, None, "Unsolvable"))
+
+    return JsonResponse(prepare_response(maze, start, end, path, "Success"))
