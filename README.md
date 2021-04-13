@@ -1,8 +1,8 @@
 # AlgoAPIs
 
-This project aims to exposes different algorithms as a REST APIs.
+This project aims to provide REST APIs for different intriguing algorithms.
 
-The API currently exposes a single REST endpoint. 
+The API exposes a single REST endpoint which expects a POST request.
 Use `{algorithm}/{input}` to get started.
 
 
