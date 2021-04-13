@@ -140,8 +140,8 @@ def start_solver(maze, start, end):
     return path
 
 
-maze = [[0,0,1,0,1],
-        [0,1,0,0,1],
-        [0,0,0,0,1]]
+# maze = [[0,0,1,0,1],
+#         [0,1,0,0,1],
+#         [0,0,0,0,1]]
 
 # print(start_solver(maze,[0,1],[1,2]))
