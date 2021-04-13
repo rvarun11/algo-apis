@@ -10,7 +10,7 @@ def prepare_response(board, solution, msg):
     return { "board": board, "solution": solution, "message": msg }
 
 @csrf_exempt
-def solve_view(request):
+def solve_sudoku(request):
     if (request.method == 'POST'):
         data = json.loads(request.body)
         puzzle = data["board"]

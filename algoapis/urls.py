@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from sudoku.views import solve_view
+from sudoku.views import solve_sudoku
+from astar.views import solve_astar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('sudoku/',solve_view)
-    #path('astar/',solve_view)
+    path('sudoku/',solve_sudoku),
+    path('astar/',solve_astar)
 ]
