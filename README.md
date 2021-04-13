@@ -8,5 +8,5 @@ Use `/{algorithm_name}` to get started.
 
 ## Algorithms:
 
-#### [Sudoku Solver API]()
-#### [A* Path Finder]()
+- [Sudoku Solver API]()
+- [A* Path Finder]()
