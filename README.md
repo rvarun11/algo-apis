@@ -7,6 +7,6 @@ The API exposes a single REST endpoint for the algorithm, which expects a POST r
 Use `/{algorithm_name}` to get started.
 
 ## Algorithms:
-
+- [A* Path Finder](https://github.com/rvarun11/algo-apis/tree/main/sudoku)
 - [Sudoku Solver API]()
-- [A* Path Finder]()
+
