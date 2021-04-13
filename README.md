@@ -3,7 +3,7 @@
 This project aims to provide REST APIs for different intriguing algorithms.
 
 The API exposes a single REST endpoint for the algorithm, which expects a POST request.
-Use `{algorithm}/{input}` to get started.
+Use `/{algorithm_name}` to get started.
 
 
 ## Sudoku Solver API
