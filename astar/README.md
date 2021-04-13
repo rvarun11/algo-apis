@@ -1,6 +1,6 @@
 # A* Pathfinder
 
-Referred to [article](https://medium.com/@nicholas.w.swift/easy-a-star-pathfinding-7e6689c7f7b2).
+Referred to this amazing [article](https://medium.com/@nicholas.w.swift/easy-a-star-pathfinding-7e6689c7f7b2).
 
 It expects a JSON-based POST request consisting of a 2D grid, start coordinate and an end coordinate.
 
