@@ -13,11 +13,11 @@ def prepare_response(maze, solution, msg):
 def solve_astar(request):
     if (request.method == 'POST'):
         data = json.loads(request.body)
-        maze = data["maze"]
-    
+        
     try:
+        maze = data["maze"]
         path = start_solver(maze)
     except:
-        return JsonResponse(prepare_response(maze, [], "Error"))
+        return JsonResponse(prepare_response([], [], "Error"))
 
     return JsonResponse(prepare_response(maze, path, "Success"))
