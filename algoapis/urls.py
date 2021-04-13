@@ -21,4 +21,5 @@ from sudoku.views import solve_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('sudoku/',solve_view)
+    path('astar/',solve_view)
 ]
