@@ -3,7 +3,7 @@ from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
 
-from sudoku.services import checker, str_to_board, solve
+from sudoku.service import checker, str_to_board, solve
 # Create your views here.
 
 def prepare_response(board, solution, msg):
