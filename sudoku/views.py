@@ -13,11 +13,15 @@ def prepare_response(board, solution, msg):
 def solve_sudoku(request):
     if (request.method == 'POST'):
         data = json.loads(request.body)
+    try:
         puzzle = data["board"]
-
+    except:
+        return JsonResponse(prepare_response([], [], "Input Error"))
+    
     if checker(puzzle):
         solution = str_to_board(puzzle)
         solve(solution, 0, 0)
         return JsonResponse(prepare_response(puzzle, solution, "OK"))
     else:
         return JsonResponse(prepare_response(puzzle, [], "Unsolvable"))
+        

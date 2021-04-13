@@ -3,14 +3,21 @@ from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
 
-from sudoku.service import checker, str_to_board, solve
+from astar.service import  start_solver
 
 # Create your views here.
-def prepare_response():
-    return None
+def prepare_response(maze, solution, msg):
+    return { "maze": maze, "solution": solution, "message": msg }
 
 @csrf_exempt
 def solve_astar(request):
     if (request.method == 'POST'):
         data = json.loads(request.body)
-    return JsonResponse(data)
+        maze = data["maze"]
+    
+    try:
+        path = start_solver(maze)
+    except:
+        return JsonResponse(prepare_response(maze, [], "Error"))
+
+    return JsonResponse(prepare_response(maze, path, "Success"))
