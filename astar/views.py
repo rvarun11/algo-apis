@@ -16,8 +16,13 @@ def solve_astar(request):
         
     try:
         maze = data["maze"]
-        path = start_solver(maze)
+        start = (data["start"][0], data["start"][1])
+        end = (data["end"][0], data["end"][1])
+        path = start_solver(maze, start, end)
     except:
         return JsonResponse(prepare_response([], [], "Error"))
+        
+    if (path == None):
+        return JsonResponse(prepare_response(maze, path, "Unsolvable"))
 
     return JsonResponse(prepare_response(maze, path, "Success"))

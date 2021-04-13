@@ -133,9 +133,15 @@ def astar(maze, start, end, allow_diagonal_movement = False):
     warn("Couldn't get a path to destination")
     return None
 
-def start_solver(maze):
-    start = (0, 0)
-    end = (len(maze)-1, len(maze[0])-1)
+def start_solver(maze, start, end):
+    start = (start[0], start[1])
+    end = (end[0], end[1])
     path = astar(maze, start, end)
     return path
 
+
+maze = [[0,0,1,0,1],
+        [0,1,0,0,1],
+        [0,0,0,0,1]]
+
+# print(start_solver(maze,[0,1],[1,2]))
