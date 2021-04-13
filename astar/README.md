@@ -48,6 +48,7 @@ Response is always a JSON object as shown below.
 
 #### Error
 Input Error occurs when the input is not in correct format. Few bugs are still there!
+
 Unsolvable Error occurs when input destination is unreachable.
 ```json
 {
