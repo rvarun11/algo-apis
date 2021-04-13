@@ -37,7 +37,7 @@ Consider the following example,
 
 ## Example Response
 
-Response is always a JSON-based list. Each element of the list is the *input* puzzle, *solution* (set to None if not solved), *status* code (OK or ERROR) and *message* (if there is an error). If the client sends a bad request (e.g: missing Content-Type or missing sudoku key), the server sends a HTTP 400 (Bad Request) detailing the error.
+Response is always a JSON object as shown below.
 
 #### Success
 ```json
