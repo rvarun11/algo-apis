@@ -50,7 +50,18 @@ Response is always a JSON object as shown below.
 }
 ```
 
-#### Error
+#### Input Error
+When the JSON object is not in the correct format.
+```json
+{
+  "board": [],
+  "solution": [],
+  "message": "Input Error"
+}
+```
+
+#### Unsolvable Error
+When input is in the correct format but the board is unsolvable.
 ```json
 {
   "board":"010020300004003020050000006007600050000100002060072000300008070000900108009000000",
