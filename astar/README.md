@@ -1,5 +1,7 @@
 # A* Pathfinder
 
+Referred to this amazing [article](https://medium.com/@nicholas.w.swift/easy-a-star-pathfinding-7e6689c7f7b2).
+
 It expects a JSON-based POST request consisting of a 2D grid, start coordinate and an end coordinate.
 
 ## Info:
@@ -46,6 +48,7 @@ Response is always a JSON object as shown below.
 
 #### Error
 Input Error occurs when the input is not in correct format. Few bugs are still there!
+
 Unsolvable Error occurs when input destination is unreachable.
 ```json
 {
