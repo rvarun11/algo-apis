@@ -1,4 +1,4 @@
-# A* Pathfinder
+# A\* Pathfinder
 
 Referred to this amazing [article](https://medium.com/@nicholas.w.swift/easy-a-star-pathfinding-7e6689c7f7b2).
 
@@ -10,12 +10,17 @@ It expects a JSON-based POST request consisting of a 2D grid, with start and end
 
 ## Example Request
 
-Consider the following example, 
+Consider the following example,
+
 ```json
 {
-"maze": [[0, 0, 1, 0, 1], [0, 1, 0, 0, 1], [0, 0, 0, 0, 1]], 
- "start": [0, 1], 
- "end": [1, 2], 
+  "maze": [
+    [0, 0, 1, 0, 1],
+    [0, 1, 0, 0, 1],
+    [0, 0, 0, 0, 1]
+  ],
+  "start": [0, 1],
+  "end": [1, 2]
 }
 ```
 
@@ -28,29 +33,43 @@ Consider the following example,
 Response is always a JSON object as shown below.
 
 #### Success
+
 ```json
 {
-"maze": [[0, 0, 1, 0, 1], [0, 1, 0, 0, 1], [0, 0, 0, 0, 1]], 
- "start": [0, 1], 
- "end": [1, 2], 
- "solution": [[0, 1], [0, 0], [1, 0], [2, 0], [2, 1], [2, 2], [1, 2]],
- "message": "Success"
+  "maze": [
+    [0, 0, 1, 0, 1],
+    [0, 1, 0, 0, 1],
+    [0, 0, 0, 0, 1]
+  ],
+  "start": [0, 1],
+  "end": [1, 2],
+  "solution": [
+    [0, 1],
+    [0, 0],
+    [1, 0],
+    [2, 0],
+    [2, 1],
+    [2, 2],
+    [1, 2]
+  ],
+  "message": "Success"
 }
 ```
 
-
 #### Error
+
 Input Error occurs when the input is not in correct format. Few bugs are still there!
 
 Unsolvable Error occurs when input destination is unreachable.
+
 ```json
 {
- "maze": [[0, 0, 1, 0, 1], 
-          [0, 1, 0, 0, 1], 
-          [1, 0, 0, 0, 1]], 
- "start": [0, 1],  
- "end": [1, 2], 
- "solution": null, 
+ "maze": [[0, 0, 1, 0, 1],
+          [0, 1, 0, 0, 1],
+          [1, 0, 0, 0, 1]],
+ "start": [0, 1],
+ "end": [1, 2],
+ "solution": null,
  "message": "Unsolvable"}
 }
 ```
