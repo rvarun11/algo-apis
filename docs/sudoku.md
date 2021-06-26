@@ -34,7 +34,7 @@ Consider the following example,
 
 Response is always a JSON object as shown below.
 
-#### Success
+### Success
 
 ```json
 {
@@ -54,9 +54,9 @@ Response is always a JSON object as shown below.
 }
 ```
 
-#### Errors
+### Errors
 
-1. Input Error: When the JSON object is not in the correct format.
+1. **Input Error**: When the JSON object is not in the correct format.
 
 ```json
 {
@@ -65,7 +65,7 @@ Response is always a JSON object as shown below.
 }
 ```
 
-2. Unsolvable Error When input is in the correct format but the board is unsolvable.
+2. **Unsolvable Error**: When input is correct but the given board is unsolvable.
 
 ```json
 {
