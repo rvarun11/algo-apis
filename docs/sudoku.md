@@ -5,7 +5,7 @@ It expects a POST request with sudoku input represented as an (9x9) 2D array wit
 
 ## Info:
 
-**URL**: `/sudoku`
+**URI**: `/sudoku`
 
 **Verb**: POST
 
