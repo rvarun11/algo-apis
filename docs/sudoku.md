@@ -1,11 +1,11 @@
 # Sudoku Solver
 
 
-It expects a POST request with sudoku input represented as an 81-character string with 0s for blanks.
+It expects a POST request with sudoku input represented as an (9x9) 2D array with 0s for blanks.
 
 ## Info:
 
-**URL**: `http://127.0.0.1:8000/sudoku`
+**URL**: `/sudoku`
 
 **Verb**: POST
 
@@ -16,16 +16,20 @@ It expects a POST request with sudoku input represented as an 81-character strin
 
 ## Example Requests
 
-Consider the following example, 
-`010020300004003020050000006007600050000100002060072000300008070000900108009000000`
+Consider the following example,  
 
-#### Form-based request
-
-`curl -X POST -d "board=010020300004003020050000006007600050000100002060072000300008070000900108009000000" http://127.0.0.1:8000/sudoku`
-
-#### JSON-based request
-
-`curl -H 'Content-Type: application/json' -X POST -d '{"board":"010020300004003020050000006007600050000100002060072000300008070000900108009000000"}' http://127.0.0.1:8000/sudoku`
+`curl -H 'Content-Type: application/json' -X POST -d '{
+    "board" :
+        [[5, 3, 0, 0, 7, 0, 0, 0, 0],
+        [6, 0, 0, 1, 9, 5, 0, 0, 0],
+        [0, 9, 8, 0, 0, 0, 0, 6, 0],
+        [8, 0, 0, 0, 6, 0, 0, 0, 3],
+        [4, 0, 0, 8, 0, 3, 0, 0, 1],
+        [7, 0, 0, 0, 2, 0, 0, 0, 6],
+        [0, 6, 0, 0, 0, 0, 2, 8, 0],
+        [0, 0, 0, 4, 1, 9, 0, 0, 5],
+        [0, 0, 0, 0, 8, 0, 0, 7, 9 ]]
+}' http://127.0.0.1:5000/sudoku`
 
 
 ## Example Response
@@ -35,37 +39,33 @@ Response is always a JSON object as shown below.
 #### Success
 ```json
 {
-  "board": "010020300004003020050000006007600050000100002060072000300008070000900108009000000",
-  "solution": 
-    [[8, 1, 6, 4, 2, 5, 3, 9, 7],
-     [7, 9, 4, 8, 6, 3, 5, 2, 1],
-     [2, 5, 3, 7, 9, 1, 4, 8, 6],
-     [1, 2, 7, 6, 3, 9, 8, 5, 4],
-     [9, 3, 5, 1, 8, 4, 7, 6, 2], 
-     [4, 6, 8, 5, 7, 2, 9, 1, 3],
-     [3, 4, 1, 2, 5, 8, 6, 7, 9],
-     [5, 7, 2, 9, 4, 6, 1, 3, 8],
-     [6, 8, 9, 3, 1, 7, 2, 4, 5]],
-  "message": "OK"
+  "status":"success",
+  "message":"OK!",
+  "board":
+    [[5,3,4,6,7,8,9,1,2],
+    [6,7,2,1,9,5,3,4,8],
+    [1,9,8,3,4,2,5,6,7],
+    [8,5,9,7,6,1,4,2,3],
+    [4,2,6,8,5,3,7,9,1],
+    [7,1,3,9,2,4,8,5,6],
+    [9,6,1,5,3,7,2,8,4],
+    [2,8,7,4,1,9,6,3,5],
+    [3,4,5,2,8,6,1,7,9]]
 }
 ```
 
-#### Input Error
-When the JSON object is not in the correct format.
+#### Errors
+  1. Input Error: When the JSON object is not in the correct format.
 ```json
 {
-  "board": [],
-  "solution": [],
-  "message": "Input Error"
+    "status": "fail",
+    "message": "Invalid Input. Please check documenation"
 }
 ```
-
-#### Unsolvable Error
-When input is in the correct format but the board is unsolvable.
+  2. Unsolvable Error When input is in the correct format but the board is unsolvable.
 ```json
 {
-  "board":"010020300004003020050000006007600050000100002060072000300008070000900108009000000",
-  "solution":[],
-  "message": "Unsolvable"
+    "status": "success",
+    "message": "Cannot be solved"
 }
 ```
