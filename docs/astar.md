@@ -37,7 +37,7 @@ Response is always a JSON object as shown below.
 ```json
 {
   "status": "success",
-  "message": "OK!"
+  "message": "Ok",
   "solution": [
     [0, 1],
     [0, 0],
@@ -46,7 +46,7 @@ Response is always a JSON object as shown below.
     [2, 1],
     [2, 2],
     [1, 2]
-  ],
+  ]
 }
 ```
 

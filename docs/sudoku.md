@@ -39,7 +39,7 @@ Response is always a JSON object as shown below.
 ```json
 {
   "status": "success",
-  "message": "OK",
+  "message": "Ok",
   "board": [
     [5, 3, 4, 6, 7, 8, 9, 1, 2],
     [6, 7, 2, 1, 9, 5, 3, 4, 8],
