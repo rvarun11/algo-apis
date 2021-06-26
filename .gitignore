@@ -1,2 +1,2 @@
-algoapis/secret.py
-.vscode/settings.json
+node_modules/
+.eslintrc.json

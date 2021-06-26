@@ -1,0 +1,30 @@
+{
+  "name": "algo-apis",
+  "version": "1.0.0",
+  "description": "This project aims to provide REST APIs for different intriguing algorithms.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rvarun11/algo-apis.git"
+  },
+  "author": "varun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rvarun11/algo-apis/issues"
+  },
+  "homepage": "https://github.com/rvarun11/algo-apis#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
+  }
+}
