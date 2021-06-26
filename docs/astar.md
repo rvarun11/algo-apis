@@ -36,13 +36,8 @@ Response is always a JSON object as shown below.
 
 ```json
 {
-  "maze": [
-    [0, 0, 1, 0, 1],
-    [0, 1, 0, 0, 1],
-    [0, 0, 0, 0, 1]
-  ],
-  "start": [0, 1],
-  "end": [1, 2],
+  "status": "success",
+  "message": "OK!"
   "solution": [
     [0, 1],
     [0, 0],
@@ -52,24 +47,25 @@ Response is always a JSON object as shown below.
     [2, 2],
     [1, 2]
   ],
-  "message": "Success"
 }
 ```
 
-#### Error
+#### Errors
 
-Input Error occurs when the input is not in correct format. Few bugs are still there!
-
-Unsolvable Error occurs when input destination is unreachable.
+1. Input Error: When the JSON object is not in the correct format.
 
 ```json
 {
- "maze": [[0, 0, 1, 0, 1],
-          [0, 1, 0, 0, 1],
-          [1, 0, 0, 0, 1]],
- "start": [0, 1],
- "end": [1, 2],
- "solution": null,
- "message": "Unsolvable"}
+  "status": "fail",
+  "message": "Invalid input. Please check documenation"
+}
+```
+
+2. Unsolvable Error When input is in the correct format but the board is unsolvable.
+
+```json
+{
+  "status": "success",
+  "message": "No path available from start coordinates to end coordinates"
 }
 ```

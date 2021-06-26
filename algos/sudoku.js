@@ -59,9 +59,9 @@ const solveSudoku = (board) => {
   if (!isValid) return;
 
   const isSolved = solve(board);
-  if (!isSolved) return { message: 'Cannot be solved!' };
+  if (!isSolved) return { message: 'Cannot be solved' };
 
-  return { message: 'OK!', board };
+  return { message: 'OK', board };
 };
 
 module.exports = solveSudoku;
