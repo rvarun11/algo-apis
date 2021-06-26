@@ -4,7 +4,7 @@ Referred to this amazing [article](https://medium.com/@nicholas.w.swift/easy-a-s
 
 It expects a JSON-based POST request consisting of a 2D grid, with start and end coordinates.
 
-## Info:
+## Info
 
 **URI**: `/astar`
 

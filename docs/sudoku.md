@@ -2,7 +2,7 @@
 
 It expects a POST request with sudoku input represented as an (9x9) 2D array with 0s for blanks.
 
-## Info:
+## Info
 
 **URI**: `/sudoku`
 

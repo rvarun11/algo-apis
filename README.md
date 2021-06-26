@@ -6,12 +6,12 @@ The API exposes a single REST endpoint for each algorithm, which expects a POST 
 
 Use `/{algorithm_name}` to get started.
 
-## Algorithms:
+## Algorithms
 
 - [A\* Path Finder](https://github.com/rvarun11/algo-apis/blob/main/docs/astar.md)
 - [Sudoku Solver](https://github.com/rvarun11/algo-apis/blob/main/docs/sudoku.md)
 
-## Resource Information:
+## Resource Information
 
 **URL**: `http://127.0.0.1:5000/`
 
