@@ -14,7 +14,7 @@ It expects a POST request with sudoku input represented as an (9x9) 2D array wit
 **Content-Type**: application/json
 
 
-## Example Requests
+## Example Request
 
 Consider the following example,  
 ```json
