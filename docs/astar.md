@@ -2,20 +2,13 @@
 
 Referred to this amazing [article](https://medium.com/@nicholas.w.swift/easy-a-star-pathfinding-7e6689c7f7b2).
 
-It expects a JSON-based POST request consisting of a 2D grid, start coordinate and an end coordinate.
+It expects a JSON-based POST request consisting of a 2D grid, with start and end coordinates.
 
 ## Info:
 
-**URL**: `http://127.0.0.1:8000/astar`
+**URI**: `/astar`
 
-**Verb**: POST
-
-**Format**: JSON
-
-**Content-Type**: application/json
-
-
-## Example Requests
+## Example Request
 
 Consider the following example, 
 ```json
