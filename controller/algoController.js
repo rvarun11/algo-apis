@@ -9,17 +9,17 @@ exports.sudoku = (req, res, next) => {
 
   res.status(200).json({
     status: 'success',
-    result,
+    ...result,
   });
 };
 
 exports.astar = (req, res, next) => {
-  const result = solveAstart(req.body.grid, req.body.start, req.body.end);
+  const result = solveAstart(req.body.maze, req.body.start, req.body.end);
   if (!result)
     return next(new AppError('Invalid Input. Please check documenation', 400));
 
   res.status(200).json({
     status: 'success',
-    result,
+    ...result,
   });
 };
