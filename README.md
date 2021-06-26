@@ -8,5 +8,5 @@ Use `/{algorithm_name}` to get started.
 
 ## Algorithms:
 
-- [A\* Path Finder]()
-- [Sudoku Solver]()
+- [A\* Path Finder](https://github.com/rvarun11/algo-apis/blob/main/docs/astar.md)
+- [Sudoku Solver](https://github.com/rvarun11/algo-apis/blob/main/docs/sudoku.md)
